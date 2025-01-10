@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Multi-step form</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <section class="container">
+
+    <div class="step__card">
+
+      <figure class="image desktop--image">
+        <img src="/assets/images/bg-sidebar-desktop.svg" alt="Desktop Image">
+      </figure>
+      <figure class="image mobile--image">
+        <img src="/assets/images/bg-sidebar-mobile.svg" alt="Mobile Image">
+      </figure>
+
+      <div class="step__info">
+        <div class="step--barge">
+          <span class="number number--1 activeStepNumber">
+            <p class="stepNumber">1</p>
+          </span>
+          <div class="text">
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </div>
+
+        <div class="step--barge">
+          <span class="number number--2">
+            <p class="stepNumber">2</p>
+          </span>
+          <div class="text">
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
+
+        <div class="step--barge">
+          <span class="number number--3">
+            <p class="stepNumber">3</p>
+          </span>
+          <div class="text">
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+
+        <div class="step--barge">
+          <span class="number number--4">
+            <p class="stepNumber">4</p>
+          </span>
+          <div class="text">
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--============= MULTI--STPES ==================-->
+    <div class="steps">
+
+      <!--=============== STEP--1 ===================-->
+      <div class="step step--1">
+        <div class="step--form ">
+          <h2 class="title">
+            Personal info
+          </h2>
+          <p class="subtitle">
+            Please provide your name, email address, and phone number.
+          </p>
+          <div class="form">
+            <div class="field__container">
+              <label for="firstname">Name</label>
+              <p class="error--message">This field is required</p>
+            </div>
+            <input type="text" placeholder="e.g. Stephen King" class="formValidation" name="name" id="name">
+            <div class="field__container">
+              <label for="firstname">Email Address</label>
+              <p class="error--message">This field is required</p>
+            </div>
+            <input type="email" placeholder="e.g. stephenking@lorem.com" class="formValidation" name="email" id="email">
+            <div class="field__container">
+              <label for="firstname">Phone Number</label>
+              <p class="error--message">This field is required</p>
+            </div>
+
+            <input type="tel" placeholder="e.g. +1 234 567 890" class="formValidation" name="telephone__num"
+              id="telephone__num">
+          </div>
+        </div>
+        <div class="btn ">
+          <button class="next-step__btn step1--btn">Next Step</button>
+        </div>
+      </div>
+
+      <!--=================== STEP--2 ========================-->
+      <div class="step step--2 ">
+        <div class=" step--form ">
+          <h2 class=" title">
+            Select your plan
+          </h2>
+          <p class="subtitle">
+            You have the option of monthly or yearly billing.
+          </p>
+
+          <div class="select--plans">
+            <div class="plan__selector">
+              <figure class="plan__icons">
+                <img src="/assets/images/icon-arcade.svg" alt="Arcade Logo">
+              </figure>
+              <div class="selected--plan__benefits">
+                <h3>Arcade</h3>
+                <span class="amount planAmount">
+                  <p class="month--amount">$9/mo</p>
+                  <p class="year--amount hidden">$90/yr</p>
+                </span>
+                <p class="mon--warranty hidden">2 months free</p>
+              </div>
+            </div>
+
+            <div class="plan__selector">
+              <figure class="plan__icons">
+                <img src="/assets/images/icon-advanced.svg" alt="Advanced Logo">
+              </figure>
+              <div class="selected--plan__benefits">
+                <h3>Advanced</h3>
+                <span class="amount planAmount">
+                  <p class="month--amount">$12/mo</p>
+                  <p class="year--amount hidden">$120/yr</p>
+                </span>
+                <p class="mon--warranty hidden">2 months free</p>
+              </div>
+            </div>
+
+            <div class="plan__selector">
+              <figure class="plan__icons">
+                <img src="/assets/images/icon-pro.svg" alt="Pro Logo">
+              </figure>
+              <div class="selected--plan__benefits">
+                <h3>Pro</h3>
+                <span class="amount planAmount">
+                  <p class="month--amount">$15/mo</p>
+                  <p class="year--amount hidden">$150/yr</p>
+                </span>
+                <p class="mon--warranty hidden">2 months free</p>
+              </div>
+            </div>
+          </div>
+          <div class="toggle">
+            <p class=" duration monthly active">
+              Monthly
+            </p>
+            <label class="toggle-box">
+              <input type="checkbox" name="checkbox" id="toggle-checkbox">
+              <div class="circle"></div>
+            </label>
+            <p class="duration yearly">
+              Yearly
+            </p>
+          </div>
+          <p class="error--message step2--errorMessage">Please select a plan</p>
+        </div>
+        <div class="btn btn__back--next">
+          <span class="prev-step_btn prevBtn_step--2">Go Back</span>
+          <button class="next-step__btn step2--btn">Next Step</button>
+        </div>
+      </div>
+
+      <!--================ STEP--3 ====================-->
+      <div class="step step--3">
+        <div class=" step--form ">
+          <h2 class=" title">
+            Pick add-ons
+          </h2>
+          <p class="subtitle">
+            Add-ons help enhance your gaming experience.
+          </p>
+
+          <div class="add-ons__container">
+
+            <div class="add-ons__selector">
+              <div class="optionContainer">
+                <div class="checkbox">
+                  <img src="/assets/images/icon-checkmark.svg" alt="">
+                </div>
+                <div class="textContainer">
+                  <h3>Online service</h3>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+              <span class="amount add-ons-amount">
+                <p class="month--amount">$1/mo</p>
+                <p class="year--amount hidden">$10/yr</p>
+              </span>
+            </div>
+
+            <div class="add-ons__selector">
+              <div class="optionContainer">
+                <div class="checkbox">
+                  <img src="/assets/images/icon-checkmark.svg" alt="">
+                </div>
+                <div class="textContainer">
+                  <h3>Larger storage</h3>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+              </div>
+              <span class="amount add-ons-amount">
+                <p class="month--amount">$2/mo</p>
+                <p class="year--amount hidden">$20/yr</p>
+              </span>
+            </div>
+
+            <div class="add-ons__selector">
+              <div class="optionContainer">
+                <div class="checkbox">
+                  <img src="/assets/images/icon-checkmark.svg" alt="">
+                </div>
+                <div class="textContainer">
+                  <h3>Customizable Profile</h3>
+                  <p>Custom theme on your profile</p>
+                </div>
+              </div>
+              <span class="amount add-ons-amount">
+                <p class="month--amount">$2/mo</p>
+                <p class="year--amount hidden">$20/yr</p>
+              </span>
+            </div>
+
+          </div>
+          <p class="error--message step3--errorMessage">Please select at least one add-on to continue</p>
+        </div>
+
+        <div class="btn btn__back--next">
+          <span class="prev-step_btn prevBtn_step--3">Go Back</span>
+          <button class="next-step__btn step3--btn">Next Step</button>
+        </div>
+      </div>
+
+      <!--=================== STEP--4 ==========================-->
+      <div class="step step--4">
+        <div class=" step--form ">
+          <h2 class=" title">
+            Finishing up
+          </h2>
+          <p class="subtitle">
+            Double-check everything looks OK before confirming.
+          </p>
+
+          <div class="finish-up__container">
+            <div class="selectionSummery">
+              <div class="step--2__summery">
+                <div class="selectedPlanDisplay">
+                  <p id="plan--description"><span class="planType">
+                      <!-- IMPLEMENTED IN JAVASCRIPT -->
+                    </span>(<span class="mon">Monthly</span> <span class="year hidden">Yearly</span>)
+                  </p>
+                  <p id="changeSelectionButton">Change</p>
+                </div>
+                <p class="amount addPlanAmount"></p>
+              </div>
+              <hr>
+              <div class="step--3__summery">
+                <!-- DISPLAYS THE ELEMENT THAT WAS SELECTED FROM THE USER USING JS -->
+              </div>
+            </div>
+            <div class="total">
+              <p id="total--text">Total (per <span class="mon">month</span> <span class="year hidden">year</span> )</p>
+              <p class="total--amount">$<span class="total--amountValue"></span>/<span
+                  class="month--amount">mo</span><span class="year--amount hidden">yr</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="btn btn__back--next">
+          <span class="prev-step_btn prevBtn_step--4">Go Back</span>
+          <button class="next-step__btn step4--btn">Next Step</button>
+        </div>
+      </div>
+
+      <!--=========== CONFIRMATION MESSAGE ===========-->
+      <div class="step formCompletionMessage hidden">
+        <img src="/assets/images/icon-thank-you.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+
+<!-- JS -->
+<script src="/src/script.js"></script>
+
+</html>
