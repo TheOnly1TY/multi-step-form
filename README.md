@@ -1,4 +1,4 @@
-# Frontend Mentor - Multi-step form
+we# Frontend Mentor - Multi-step form
 
 ![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
 
@@ -67,5 +67,4 @@ You can host your site using one of these solutions or any of our other trusted 
 
 ## Create a custom `README.md`
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
